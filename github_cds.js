@@ -3,10 +3,10 @@ var https=require('https');
 var qs = require('querystring');
 var exec = require('child_process').exec;
 
-var BRANCH  = 'master';
-var URL     = 'https://github.com/joshie/jtest';
-var COMMAND = '/bin/bash /opt/services/scripts/update_jtest.bash';
-var PORT    = 1337
+var BRANCH  = process.argv[2];
+var URL     = process.argv[3];
+var COMMAND = process.argv[4];
+var PORT    = process.argv[5];
 
 var github_options = {
   hostname: 'api.github.com',
